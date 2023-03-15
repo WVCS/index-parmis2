@@ -271,9 +271,9 @@ ul.a {
   text-align: center;
 }
 .E img{
-     width: 356px;
+     width: 25%;
     aspect-ratio: auto 712 / 356;
-    height: 178px;
+    height: 15%;
 }
 h1{
    font-family: Josefin sans;
@@ -283,9 +283,9 @@ h1{
   grid-area: 6/1/6/6;
 }
 .x img{
-  width: 1890px;
-  height: 700px;
-}
+  width:100%;
+  height: 100%;
+       }
        
  table {
   width: 100%;
@@ -300,4 +300,50 @@ h1{
   height: 100%;
   float: absolute;
 }
+       
+       
+       @media only screen and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  body{
+   background-color: #E0DEDC;
+background: hsla(0, 0%, 100%, 1);
+
+background: linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 6%, 87%, 1) 34%, hsla(39, 100%, 95%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 6%, 87%, 1) 34%, hsla(39, 100%, 95%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 6%, 87%, 1) 34%, hsla(39, 100%, 95%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#e0dedc", GradientType=1 );
+  background-repeat: repeat-x;
+   background-size: 2000px 1000px;
+}
+  .clouds img {
+  width: 100%;
+  height: 100%;
+  float: absolute;
+}
+  .B {
+  grid-area: 2/ 1/ 5/ 2;
+  font-family: josefin sans;
+  font-size: 15px;
+  text-align: center;
+} /* rowline/ column line/ end row/ end column*/
+.B img{
+  height: 100px;
+  border-radius: 20%;
+}
+  .C{
+  grid-area: 2/2/5/4;
+    color:#795736; 
+  font-family: papyrus;
+  font-size: 15px;
+  text-align:center;
+}
+.C img {
+   height: 120px;
+  border-radius: 20%;
+} 
 
