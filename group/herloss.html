@@ -12,9 +12,12 @@
       <li class= "navli"> <a href= convince.html> Music </a> </li>
         <li class= "navli"> <a href= convince.html> Tour </a> </li>
         <li class= "navli"> <a href= convince.html> Merch </a> </li>
-     <center>
-       <img class= "navpic" src="https://github.com/WVCS/index-parmis2/blob/main/group/Her%20Loss%20icon.png?raw=true">
-      </center> 
+     <div class= "wrapper1"> 
+      <div class= "x"> x <img src="https://i1.sndcdn.com/artworks-Nypk2VsDToayzdVI-SGxyzw-t500x500.jpg">
+        </div> 
+      <div class= "y"> y </div> 
+         <div class= "z"> z  </div> 
+          <div class= "w"> w </div>  
       </nav> 
     </head>
   <body> 
@@ -52,10 +55,38 @@ a{
   border:solid black 2px;
   font-size: 24px;
 }
-.navpic{
-  height: 100px;
-  text-align: center;
+div{
+  background-color: none;
+  border:none;
+  border-radius: 5px;
 }
+
+.wrapper1{
+  display: grid; 
+  height: 55px ; /*  vh & % is responsive and px is solid */
+  grid-template:
+  "x y z w" auto;
+  grid-row-gap: 0px ; 
+  grid-colimn-gap: 0%;
+}
+.x {
+  grid-column:;
+}
+.x img{
+  height: 50px;
+  float: right;
+}
+.y {
+  grid-column: ;
+}
+.z {
+  grid-column:;
+}
+.w{
+  grid-column:;
+}
+
+
 
 
 @media only screen and (max-width: 1024px) {
