@@ -1,17 +1,18 @@
 <html>
  <head>
-  <title> Drake & 21 </title> 
+  <title> Drake & 21 Home </title> 
   
 <link rel="icon" type="image/x-icon" href="https://github.com/WVCS/index-parmis2/blob/main/group/Her%20Loss%20icon.png?raw=true"> 
     <br>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <nav>
+     <nav>
       <li class= "navli"> <a href="../index.html"> ABOUT THE CREATOR </a> </li>
-       <li class= "navli"> <a href=../nounproject.html> Home </a> </li>
+       <li class= "navli"> <a class="active"  href=../nounproject.html> Home </a> </li>
       <li class= "navli"> <a href= convince.html>News </a> </li>
       <li class= "navli"> <a href= convince.html> Music </a> </li>
         <li class= "navli"> <a href= convince.html> Tour </a> </li>
         <li class= "navli"> <a href= convince.html> Merch </a> </li>
+
      <div class= "wrapper1"> 
       <div class= "x"> x <img src="https://github.com/WVCS/index-parmis2/blob/main/group/Her%20Loss%20icon.png?raw=true">
         </div> 
@@ -21,7 +22,23 @@
       </nav> 
     </head>
   <body> 
-   
+    <br>
+    <br>
+    <div class= "wrapper"> 
+      <div class= "A"> <center> <img src="https://live-production.wcms.abc-cdn.net.au/bdd303f9ee1882c37e769d771016dc9a?impolicy=wcms_crop_resize&cropH=810&cropW=1440&xPos=0&yPos=241&width=862&height=485"> </div> 
+       </div> 
+      <center>
+      <img class="pic" src="https://github.com/WVCS/index-parmis2/blob/main/group/cloud%20(1).png?raw=true">
+        <h1> Subscribe to Newsetller </h1>
+<div class="form">
+<form onsubmit="alert('You Have Been Added to Our Newsettler')">
+  <label for="fname">Email:</label>
+  <input type="text" id="fname" name="fname" value="...@gmail.com"><br> <br>
+  <label for="lname">Phone Number:</label>
+  <input type="text" id="lname" name="lname" value="optional."><br><br>
+  <input type="submit" value="Submit">
+</form> 
+        </div>
  </body>
       
       </html>
@@ -38,6 +55,7 @@ list-style-type: none;
   margin: 0;
   font-family: 'Passion One';
   font-size: 22px;
+  position: relative;
 }
 
 .navli{
@@ -51,9 +69,13 @@ a{
   text-align: center;
 }
 .navli:hover {
-  background-color: #BFABCB;
+  background-color: #7A6B77;
   border:solid black 2px;
   font-size: 24px;
+}
+.active {
+  background-color: #BFABCB;
+  padding:10px;
 }
 div{
   background-color: none;
@@ -85,16 +107,97 @@ div{
 .w{
   grid-column:;
 }
+body{
+  background-color:silver;
+}
 
 
-
-
+div{
+   background-color: none;
+  border: none;
+  border-radius: 10px;
+}
+.wrapper{
+  display: grid; 
+  height: 100vh; /*  vh & % is responsive and px is solid */
+  grid-template:
+  "A B C" auto 
+  "D E F"
+  "G H I";
+  grid-row-gap: 5px ; 
+  grid-colimn-gap: 5%;
+}
+.A {
+  grid-column: 1/4;
+}
+.A img{
+  height: 58vw;
+}
+.pic{
+  height: 750px;
+  position: absolute;
+        left: 600px;
+  top: 450px;
+}
+.form{
+  top: 150px;
+  left: 10px;
+  position:relative;
+}
+h1{
+  top: 150px;
+  position: relative;
+  font-family: 'Passion One';
+}
+#fname{
+ color:grey;
+}
+#lname{
+  color:grey;
+}
 @media only screen and (max-width: 1024px) {
   .wrapper {
     flex-direction: column;
   }
   body{
-  background-color: #DCE1E4;
+  background-color:black;
 }
-  
- </style>
+  nav { 
+list-style-type: none; 
+  position: fixed;
+  width: 100vw;
+  overflow: hidden;
+  background-color:Black; 
+  left: 0;
+  top: 0;
+  margin: 0;
+  font-family: 'Passion One';
+  font-size: 15px;
+}
+
+.navli{
+  display:inline;
+  float: left ;
+  padding: 17px; 
+}
+a{
+  text-decoration: none;
+  color:#FFFFFF; 
+  text-align: center;
+}
+.navli:hover {
+  background-color: #7A6B77;
+  border:solid black 2px;
+  font-size: 18px;
+}
+  .x img{
+  height: 0px;
+  float: right;
+}
+  .pic{
+  height: 0px;
+}
+  h1{
+    color: white;
+  }
+   </style>
