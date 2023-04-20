@@ -20,38 +20,126 @@
           <div class= "w"> w </div>  
       </nav> 
       </head>
+ <body>
 <br>
+<br>
+   <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+ <center>   <img class=pic src="https://images.app.goo.gl/CgsjSbQxqxDsHS8K9"> </center>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+   <center> <img src="https://images.app.goo.gl/8Qbn6RAjWZgBvckM6"> </center>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+   <center> <img src="https://images.app.goo.gl/tfhM7E7i121rxHS79"> </center>
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
 <br>
 
-<div class="wrapper">
-<div class="slideshows">
-  <div class="slideshow slideshow--hero">
-    <div class="slides">
-      <div class="slide slide1"></div>
-      <div class="slide slide2"></div>
-      <div class="slide slide3"></div>
-    </div>
-  </div>
-  <div class="slideshow slideshow--contrast slideshow--contrast--before">
-    <div class="slides">
-      <div class="slide slide1"></div>
-      <div class="slide slide2"></div>
-      <div class="slide slide3"></div>
-    </div>
-  </div>
-  <div class="slideshow slideshow--contrast slideshow--contrast--after">
-    <div class="slides">
-      <div class="slide slide1"></div>
-      <div class="slide slide2"></div>
-      <div class="slide slide3"></div>
-    </div>
-  </div>
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-  </div>
-<br>
-<br> 
-  </body>
-</html>
+
+
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+     <br>
+     <br>
+     <center>
+     
+<h2>Her Loss- Europe </h2>
+
+<table>
+  
+  <tr>
+    <td>PASSEIO MARITIMO DE ALGES</td>
+    <td>LISBON, PORTUGAL</td>
+    <td>TUE, JUN 6</td>
+    <td> <a href="https://www.ticketmaster.com/drake-tickets/artist/1319371" class="button"> Tickets </a> </td>
+  </tr>
+  <tr>
+    <td>ETIHAD STADIUM</td>
+    <td>MANCHESTER, UNITED KINGDOM</td>
+    <td>SAT, JUN 10</td>
+    <td> <a href="https://www.ticketmaster.com/drake-tickets/artist/1319371" class="button"> Tickets </a> </td>
+  </tr>
+  <tr>
+    <td>KING BAUDOUIN STADIUM</td>
+    <td>AMSTERDAM, NETHERLANDS
+</td>
+    <td>WED, JUN 14</td>
+    <td> <a href="https://www.ticketmaster.com/drake-tickets/artist/1319371" class="button"> Tickets </a> </td>
+  </tr>
+  <tr>
+    <td>MARLAY PARK</td>
+    <td>OSLO, NORWAY</td>
+    <td>SAT, JUN 17</td>
+    <td> <a href="https://www.ticketmaster.com/drake-tickets/artist/1319371" class="button"> Tickets </a> </td>
+  </tr>
+  <tr>
+    <td>JOHAN CRUIJIFF ARENA</td>
+    <td>YDUBLIN, IRELAND</td>
+    <td>TUE, JUN 20</td>
+    <td> <a href="https://www.ticketmaster.com/drake-tickets/artist/1319371" class="button"> Tickets </a> </td>
+  </tr>
+  <tr>
+    <td>VOLKSPARKSTADION</td>
+    <td>HAMBURG, GERMANY</td>
+    <td>FRI, JUN 23</td>
+    <td> <a href="https://www.ticketmaster.com/drake-tickets/artist/1319371" class="button"> Tickets </a> </td>
+  </tr>
+</table>
+
+</body>
+</html> 
+
+
  
  <style>
   @import url(https://fonts.googleapis.com/css?family=Passion+One);
@@ -109,290 +197,135 @@ div{
 }
 body{
   background-color:silver;
-}
-.wrapper {
+  }
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
   position: relative;
-  height: 1000px;
-  width: 100vw;
-  overflow: hidden;
+  margin: auto;
+}
+.pic{
+  height: 100%;
+  width: 100%;
 }
 
-.slideshow {
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
   position: absolute;
   top: 0;
-  left: 50%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+table {
+  font-family: 'Passion One';
+  font-size: 24px;
+  border-collapse: collapse;
   width: 100%;
-  height: 100%;
-  transform: translateX(-50%);
-
-  &--hero {
-    z-index: 3;
-    left: 0;
-    top: 50%;
-    // width: 100%;
-    height: 85%;
-    transform: translateY(-50%) skewY(-10deg);
-    transform-origin: center;
-    overflow: hidden;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
-
-    .slides {
-      position: absolute;
-      left: 0;
-      top: -10%;
-      width: 100vw;
-      height: 100vh;
-      animation: 11s slideshow-hero-mobile -3s infinite;
-    }
-
-    .slide1 {
-      background-image: url(https://uproxx.com/wp-content/uploads/2023/03/drake-and-21-savage-tour-grid.jpeg?w=710);
-      animation: 20s slides-set-1 -0.1s infinite;
-    }
-    .slide2 {
-      background-image: url(https://www.rap-up.com/wp-content/uploads/2022/11/drake-21-savage-snl-1280x720.jpg);
-      animation: 20s slides-set-2 -0.1s infinite;
-    }
-    .slide3 {
-      background-image: url(https://staticg.sportskeeda.com/editor/2023/01/38fac-16743806503492-1920.jpg);
-      animation: 20s slides-set-3 -0.1s infinite;
-    }
-
-    @media (min-width: 600px) {
-      left: 50%;
-      top: 0;
-      width: 67%;
-      height: 100%;
-      transform: translateX(-50%) skewX(-10deg);
-
-      .slides {
-        top: 0;
-        left: -25%;
-        height: 100%;
-        animation: 11s slideshow-hero -3s infinite;
-      }
-    }
-  }
-
-  &--contrast {
-    z-index: 1;
-    width: 100%;
-    height: 50%;
-    transform: none;
-    
-    .slide {
-      // filter: blur(3px);
-    }
-
-    &--before {
-      left: 0;
-
-      .slides {
-        width: 100vw;
-      }
-    }
-
-    &--after {
-      z-index: 2;
-      left: auto;
-      right: 0;
-
-      .slides {
-        width: 100vw;
-        left: auto;
-        right: 0;
-      }
-    }
-
-    .slides {
-      animation: 14s slideshow-contrast -5s infinite;
-    }
-
-    .slide1 {
-      background-image: linear-gradient(to bottom, rgba(200,200,75,0.25) 0, rgba(200,75,75,0.5) 100%), url(https://www.rap-up.com/wp-content/uploads/2022/11/drake-21-savage-snl-1280x720.jpg);
-      // background-image: url(../img/slideshow/hero-1.jpg);
-      animation: 20s slides-set-1 -0.2s infinite;
-    }
-    .slide2 {
-      background-image: linear-gradient(to bottom, rgba(200,200,75,0.25) 0, rgba(200,75,75,0.5) 100%), url(https://static.hiphopdx.com/2023/03/drake-and-21-savage-fans-furious-over-its-all-a-blur-ticket-prices--1191x675.png);
-      // background-image: url(../img/slideshow/hero-2.jpg);
-      animation: 20s slides-set-2 -0.2s infinite;
-    }
-    .slide3 {
-      background-image: linear-gradient(to bottom, rgba(200,200,75,0.25) 0, rgba(200,75,75,0.5) 100%), url(https://staticg.sportskeeda.com/editor/2023/01/38fac-16743806503492-1920.jpg);
-      // background-image: url(../img/slideshow/hero-3.jpg);
-      animation: 20s slides-set-3 -0.2s infinite;
-    }
-
-    &--after {
-      top: auto;
-      bottom: 0;
-
-      .slides {
-        animation: 13s slideshow-contrast -13s infinite;
-      }
-      .slide {
-        background-position: right;
-      }
-      .slide1 {
-        animation: 20s slides-set-1 infinite;
-      }
-      .slide2 {
-        animation: 20s slides-set-2 infinite;
-      }
-      .slide3 {
-        animation: 20s slides-set-3 infinite;
-      }
-    }
-
-    @media (min-width: 600px) {
-      width: 50%;
-      height: 100%;
-
-      &--after {
-        top: 0;
-        bottom: auto;
-
-        .slides {
-          width: 50vw;
-        }
-      }
-    }
-  }
 }
 
-.slides,
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.button {
+  background-color: #916C80;
+  font-family: 'Passion One';
+  border-radius: 3px;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+   opacity: 0.7;
+}
+h2{
+  font-family:'Passion One';
+  font-size: 35px;
 }
 
-@keyframes slideshow-hero-mobile {
-  0% {
-    transform: scale(1) skewY(10deg);
-  }
-  50% {
-    transform: scale(1.05) skewY(10deg);
-  }
-  100% {
-    transform: scale(1) skewY(10deg);
-  }
+td, th {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
-@keyframes slideshow-hero {
-  0% {
-    transform: scale(1) skewX(10deg);
-  }
-  50% {
-    transform: scale(1.05) skewX(10deg);
-  }
-  100% {
-    transform: scale(1) skewX(10deg);
-  }
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
-
-@keyframes slideshow-contrast {
-  0% {
-    transform: scale(1.05);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes slides-set-1 {
-  0% {
-    opacity: 1;
-    // transform: translateY(0);
-    transform: scale(1);
-  }
-  31% {
-    opacity: 1;
-    // transform: translateY(0);
-    transform: scale(1);
-  }
-  34% {
-    opacity: 0;
-    // transform: translateY(100px);
-    transform: scale(1.05);
-  }
-  97% {
-    opacity: 0;
-    // transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    // transform: translateY(0);
-    transform: scale(1);
-  }
-}
-@keyframes slides-set-2 {
-  0% {
-    opacity: 0;
-    // transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  31% {
-    opacity: 0;
-    // transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  34% {
-    opacity: 1;
-    // transform: translateY(0);
-    transform: scale(1);
-  }
-  64% {
-    opacity: 1;
-    // transform: translateY(0);
-    transform: scale(1);
-  }
-  67% {
-    opacity: 0;
-    // transform: translateY(100px);
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 0;
-    // transform: translateY(100px);
-    transform: scale(1.05);
-  }
-}
-@keyframes slides-set-3 {
-  0% {
-    opacity: 0;
-    // transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  64% {
-    opacity: 0;
-    // transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  67% {
-    opacity: 1;
-    // transform: translateY(0);
-    transform: scale(1);
-  }
-  97% {
-    opacity: 1;
-    // transform: translateY(0);
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    // transform: translateY(100px);
-    transform: scale(1.05);
-  }
-}
-</style>
+  </style>
