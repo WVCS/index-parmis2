@@ -1,7 +1,7 @@
 
 <html>
  <head>
-  <title> VR Park </title> 
+  <title> Attractions </title> 
   
 <link rel="icon" type="https://github.com/WVCS/index-parmis2/blob/main/park/vr%20logo.png?raw=true"> 
     <br>
@@ -11,7 +11,7 @@
       <li class= "navli"> <a href="../index.html"> ABOUT THE CREATOR </a> </li>
        <li class= "navli"> <a href=../park/vr.html> Home </a> </li>
       <li class= "navli"> <a class="actived"  href=game.html>Games </a> </li>
-      <li class= "navli"> <a href= ../park/loc.html> Location & Hours </a> </li>
+      <li class= "navli"> <a href= ../park/loc.html> Location/Hours/Tickets </a> </li>
         <li class= "navli"> <a href=../park/dine.html> Dining </a> </li>
         <li class= "navli"> <a href= ../park/faq.html> FAQ </a> </li>
 
@@ -24,8 +24,105 @@
       </nav> 
       </head>
        <body>
+        
+<h2 style="text-align:center">Offered Games</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://media.istockphoto.com/id/1316805164/photo/woman-play-3d-vr-game.jpg?s=612x612&w=0&k=20&c=rCNry1aOTxo1arYzeNabs71jlxwoy3RZaSIGBjPCME8=" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://cdn-gdeol.nitrocdn.com/YYqCucGvpuYzLWbGlnlsTIQEtOhxqboP/assets/images/optimized/rev-2bcf4ba/wp-content/uploads/bb-plugin/cache/ZL_Group_Players4_WEB-landscape.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://cdn.mos.cms.futurecdn.net/wAUojyYGb7Eqz4fP2nQu3K.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2017/01/12/81d2a52c-d652-11e6-bbb7-6a43a6f882fe_1280x720.jpg?itok=J7FAKbQ5" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://cdn.cnn.com/cnnnext/dam/assets/171030115617-vr-park-on-japan.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://finglobalwp.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2020/11/23095050/virtual-safari.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://media.istockphoto.com/id/1316805164/photo/woman-play-3d-vr-game.jpg?s=612x612&w=0&k=20&c=rCNry1aOTxo1arYzeNabs71jlxwoy3RZaSIGBjPCME8=" style="width:100%" onclick="currentSlide(1)" alt="Driving Stimulators">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://cdn-gdeol.nitrocdn.com/YYqCucGvpuYzLWbGlnlsTIQEtOhxqboP/assets/images/optimized/rev-2bcf4ba/wp-content/uploads/bb-plugin/cache/ZL_Group_Players4_WEB-landscape.jpg" style="width:100%" onclick="currentSlide(2)" alt="MultiPlayer Games">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://cdn.mos.cms.futurecdn.net/wAUojyYGb7Eqz4fP2nQu3K.jpg" style="width:100%" onclick="currentSlide(3)" alt="Sci-Fi Advantures">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2017/01/12/81d2a52c-d652-11e6-bbb7-6a43a6f882fe_1280x720.jpg?itok=J7FAKbQ5" style="width:100%" onclick="currentSlide(4)" alt="VR Adrenaline">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://cdn.cnn.com/cnnnext/dam/assets/171030115617-vr-park-on-japan.jpg" style="width:100%" onclick="currentSlide(5)" alt="Zip Line">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://finglobalwp.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2020/11/23095050/virtual-safari.jpg" style="width:100%" onclick="currentSlide(6)" alt="VR Safari">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    <center>
+    <a href="../park/tickets.html" class="button"> Purcase Tickets</a>
+
        </body>
        </html>
+  
   <style>
  @import url(https://fonts.googleapis.com/css?family=Bungee);
 
@@ -103,4 +200,190 @@ div{
 body{
   background-color: white;
 }
+   
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+h2{
+  font-family:'Bungee';
+  font-size:32px;
+  color: #3A3CA7;
+  cursor: pointer;
+}
+h2:hover{
+  color:black;
+  opacity: 0.5;
+}
+
+.button {
+  background-color: #6E5CFF;
+  font-family: 'Bungee';
+  border-radius: 20px;
+  border:#3A3CA7 solid 3px;
+  color: white;
+  padding: 40px 56px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+   opacity: 0.7;
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  body{
+  background-color: #475F85;
+}
+  nav { 
+list-style-type: none; 
+  position: fixed;
+  width: 100vw;
+  overflow: hidden;
+  background-color: white; 
+  left: 0;
+  top: 0;
+  margin: 0;
+  font-family: 'Passion One';
+  font-size: 10px;
+}
+
+.navli{
+  display:inline;
+  float: left ;
+  padding: 10px; 
+}
+a{
+  text-decoration: none;
+    color: #3A3CA7;
+  text-align: center;
+}
+.navli:hover {
+  background-color: #6E5CFF;
+  border:solid black 1px;
+  font-size: 15px;
+}
+  .x img{
+  height: 0px;
+  float: right;
+}
+  .button {
+  background-color: #6E5CFF;
+  font-family: 'Bungee';
+  border-radius: 12px;
+  border:#3A3CA7 solid 3px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+   opacity: 0.7;
+}
+  h2{
+    color:white;
+  }
   </style>
