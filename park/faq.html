@@ -26,8 +26,84 @@
       </head>
       
         <body>
-       </body>
-       </html>
+             
+<table class="center">
+  <tr>
+    <th>do the day passes get dining benefits also <br>and can we hold birthday parties and events there? </th>
+    <th>What kind of experiences can I expect at a VR park? <br> and are there any age restriction? </th> 
+    <th>Can I wear glasses inside VR headsets?</th>
+    <th>How long do VR experiences last?
+    how does VR work?</th>
+    <th> What should I wear to a VR park?</th>
+  </tr>
+  <tr>
+    <td>unfortunetly our day passes do not cover dining and if you wish to eat there <br>you must purchase food seperately. 
+ <br>  Our team does offer birthday reservations and other events reservations for a <br> higher cost if you wish to get special services. </td>
+    <td>At a VR park, you can expect a variety of experiences, from <br>immersive games and simulations to artistic and educational VR experiences. Some VR parks may also offer <br>multiplayer games and experiences. <br>
+and Yes, there are often age restrictions for VR experiences. We require participants to be at least 12 or 13 years old.</td>
+    <td>Yes, many VR headsets are designed to accommodate glasses wearers.<br> However, it's a good idea to check with the VR park beforehand <br>to ensure that the headset they provide will fit comfortably over your glasses.   
+    </td>
+    <td>The duration of VR experiences can vary depending on <br> the experience and the game. <br> <br> VR technology works by creating a simulated environment that can be interacted with using a VR headset, controllers, and sensors. <br>The headset displays images and videos that create the illusion of being in a different environment, while the controllers and <br>sensors track your movements and translate them into actions in the virtual world. <br>Some games may last only a few minutes, while others may last up to an hour. </td>
+    <td>It's a good idea to wear comfortable clothing and shoes to a VR park, as you may be standing or<br> moving around for extended periods of time. <br> Avoid wearing clothing with loose or dangling accessories that may get caught on VR equipment. </td>
+  </tr>
+  <tr>
+    
+  </tr>
+</table>
+        <br>
+        <br>
+      
+
+<h2>Let us know your questions and concerns!</h2>
+<p>leave a comment, question, or a concern down below and our team will respond as soon as possible!</p>
+<br>
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">City</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">San Diego</option>
+          <option value="canada">Hooverville</option>
+          <option value="usa">Hogwarts</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
   <style>
  @import url(https://fonts.googleapis.com/css?family=Bungee);
 
@@ -104,5 +180,102 @@ div{
 
 body{
   background-color: white;
+}
+   
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+h2{
+  font-family: 'bungee';
+}
+p{
+  font-family: 'roman';
+}
+  table {
+  border: 10px solid white;
+  border-collapse: collapse;
+   text-align: center; 
+
+}
+th{
+  border: 20px solid white;
+  border-collapse: collapse;
+   text-align: center; 
+  font-family: 'Bungee';
+  font-size:18px;
+  background-color:#858585;
+}
+td{
+  border: 15px solid white;
+  border-collapse: collapse;
+   text-align: center; 
+  font-size: 20px;
+font-family: 'roman';
+  background-color:#CCCCCC;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
 }
   </style>
