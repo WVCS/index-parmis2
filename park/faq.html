@@ -277,5 +277,84 @@ font-family: 'roman';
 table.center {
   margin-left: auto; 
   margin-right: auto;
+} 
+   
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  body{
+  background-color: #475F85;
+}
+  nav { 
+list-style-type: none; 
+  position: fixed;
+  width: 100vw;
+  overflow: hidden;
+  background-color: white; 
+  left: 0;
+  top: 0;
+  margin: 0;
+  font-family: 'Passion One';
+  font-size: 10px;
+}
+
+.navli{
+  display:inline;
+  float: left ;
+  padding: 10px; 
+}
+a{
+  text-decoration: none;
+  color: #3A3CA7; 
+  text-align: center;
+}
+.navli:hover {
+  background-color: #6E5CFF;
+  border:solid black 1px;
+  font-size: 15px;
+}
+  .x img{
+  height: 0px;
+  float: right;
+}
+  h2 , h1{
+    color:white;
+   
+  }
+  h4{
+    color:white;
+  }
+  p{
+    color:white;
+  }
+  
+
+  table {
+  border: 5px solid white;
+  border-collapse: collapse;
+   text-align: center; 
+
+}
+th{
+  border: 10px solid white;
+  border-collapse: collapse;
+   text-align: center; 
+  font-family: 'Bungee';
+  font-size:12px;
+  background-color:#858585;
+}
+td{
+  border: 5px solid white;
+  border-collapse: collapse;
+   text-align: center; 
+  font-size: 10px;
+font-family: 'roman';
+  background-color:#CCCCCC;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
 }
   </style>
